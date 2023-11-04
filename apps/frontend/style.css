@@ -1,0 +1,287 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+
+    width: 100vw;
+    height: fit-content;
+
+}
+
+body{
+
+    display:flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+
+}
+
+.header{
+
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #CCC8AA;
+}
+
+.content{
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10vh 32vw 10vh 32vw;
+
+}
+
+
+.calculator{
+
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #191717;
+    padding: 3vw 1vw;
+    gap: 2vw;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+
+
+
+
+.display{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    
+
+}
+
+#logo{
+
+    width: 6.3vw;
+    height:2vw;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#displayContent{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 26.4vw;
+    height: 10vw;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+
+}
+
+.operationHistory{
+
+    display: flex;
+    justify-content: end;
+    height: 7vw;
+
+}
+
+.operationResult{
+
+    display: flex;
+    justify-content: end;
+    height: 7vw;
+
+}
+
+
+
+
+
+
+.operationContent{
+
+    width: 26.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F1EFEF;
+    border-radius: 5px;
+}
+
+.upperInputs{
+
+    width: 26.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw 0vw;
+    gap: 1vw;
+    
+
+}
+
+.editInputs{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1vw;
+}
+
+#clear{
+
+    width:6vw;
+    height: 3.4vw;
+    text-align: center;
+    background-color: red;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 7px;
+}
+
+#delete{
+
+    width:5.2vw;
+    height: 3.4vw;
+    text-align: center;
+    background-color: red;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 7px;
+}
+
+
+
+.operationInputs2{
+
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:1vw;
+
+}
+
+.operationButton{
+
+    width: 3.4vw;
+    height: 3.4vw;
+    text-align: center;
+    background-color: orange;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 7px;
+
+}
+
+
+
+
+.middleInputs{
+
+    width: 26.4vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    background-color: #F1EFEF;
+
+}
+
+.numbersInputs{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:1vw;
+
+}
+
+.operationsInputs{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:1vw;
+}
+
+.line1,.line2,.line3{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:1vw;
+
+}
+
+.numberBtn{
+
+    width: 3.4vw;
+    height: 3.4vw;
+    text-align: center;
+    background-color: #CCC8AA;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 7px;
+
+}
+
+.bottomInputs{
+
+    width: 26.4vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    align-items: center;
+    padding: 1vw 0vw;
+
+}
+
+#total,#n0{
+
+    width: 5.8vw;
+    height: 3.4vw;
+    background-color: #7D7C7C;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 7px;
+}
+
+#fraction{
+
+    width: 4.1vw;
+    height: 3.4vw;
+    background-color: #7D7C7C;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 7px;
+}
+
+button:active{
+
+    transform: scale(0.9);
+
+}
+
+.footer{
+
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    
+}
+
+
