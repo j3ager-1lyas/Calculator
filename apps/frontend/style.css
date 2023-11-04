@@ -94,7 +94,10 @@ body{
 
     display: flex;
     justify-content: end;
+    width: 26.4vw;
     height: 7vw;
+    border-bottom: 1px dashed rgb(223, 222, 222);
+    border-collapse: collapse;
 
 }
 
@@ -103,6 +106,7 @@ body{
     display: flex;
     justify-content: end;
     height: 7vw;
+    width: 26.4vw;
 
 }
 
@@ -150,6 +154,8 @@ body{
     background-color: red;
     box-shadow: 1px 1px 1px gray;
     border-radius: 7px;
+    cursor: pointer;
+    
 }
 
 #delete{
@@ -160,6 +166,7 @@ body{
     background-color: red;
     box-shadow: 1px 1px 1px gray;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 
@@ -181,6 +188,7 @@ body{
     background-color: orange;
     box-shadow: 1px 1px 1px gray;
     border-radius: 7px;
+    cursor: pointer;
 
 }
 
@@ -233,6 +241,7 @@ body{
     background-color: #CCC8AA;
     box-shadow: 1px 1px 1px gray;
     border-radius: 7px;
+    cursor: pointer;
 
 }
 
@@ -254,6 +263,7 @@ body{
     background-color: #7D7C7C;
     box-shadow: 1px 1px 1px gray;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 #fraction{
@@ -263,6 +273,8 @@ body{
     background-color: #7D7C7C;
     box-shadow: 1px 1px 1px gray;
     border-radius: 7px;
+    cursor: pointer;
+
 }
 
 button:active{
@@ -281,7 +293,7 @@ button:active{
     justify-content: center;
     align-items: center;
     background-color: bisque;
-    
+
 }
 
 
