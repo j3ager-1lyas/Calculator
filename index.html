@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./apps/frontend/style.css">
+    <script src="./apps/frontend/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -23,42 +24,42 @@
                 <div class="inputs">
                     <div class="upperInputs">
                         <div class="editInputs">
-                            <button id="clear"> Clear </button>
-                            <button id="delete"> Delete</button>
+                            <button class="editBtn" id="clear" value="clear"> Clear </button>
+                            <button class="editBtn" id="delete" value="delete"> Delete</button>
                         </div>
                         <div class="operationInputs2">
-                            <button class="operationButton" id="power">x^</button>
-                            <button class="operationButton" id="divison">/</button>
+                            <button class="operationButton" id="power" value="^">x^</button>
+                            <button class="operationButton" id="divison" value="/">/</button>
                         </div>
                     </div>
                     <div class="middleInputs">
                         <div class="numbersInputs">
                             <div class="line1">
-                                <button class="numberBtn" id="n7">7</button>
-                                <button class="numberBtn" id="n8">8</button>
-                                <button class="numberBtn" id="n9">9</button>
+                                <button class="numberBtn" id="n7" value="7">7</button>
+                                <button class="numberBtn" id="n8" value="8">8</button>
+                                <button class="numberBtn" id="n9" value="9">9</button>
                             </div>
                             <div class="line2">
-                                <button class="numberBtn" id="n4">4</button>
-                                <button class="numberBtn" id="n5">5</button>
-                                <button class="numberBtn" id="n6">6</button>
+                                <button class="numberBtn" id="n4" value="4">4</button>
+                                <button class="numberBtn" id="n5" value="5">5</button>
+                                <button class="numberBtn" id="n6" value="6">6</button>
                             </div>
                             <div class="line3">
-                                <button class="numberBtn" id="n1">1</button>
-                                <button class="numberBtn" id="n2">2</button>
-                                <button class="numberBtn" id="n3">3</button>
+                                <button class="numberBtn" id="n1" value="1">1</button>
+                                <button class="numberBtn" id="n2" value="2">2</button>
+                                <button class="numberBtn" id="n3" value="3">3</button>
                             </div>
                         </div>
                         <div class="operationsInputs">
-                            <button class="operationButton" id="addition">+</button>
-                            <button class="operationButton" id="substraction">-</button>
-                            <button class="operationButton" id="multiplication">*</button>
+                            <button class="operationButton" id="addition" value="+">+</button>
+                            <button class="operationButton" id="substraction" value="-">-</button>
+                            <button class="operationButton" id="multiplication" value="*">*</button>
                         </div>
                     </div>
                     <div class="bottomInputs">
-                        <button id="n0">0</button>
-                        <button id="fraction">.</button>
-                        <button id="total">=</button>
+                        <button class="numberBtn" id="n0" value="0">0</button>
+                        <button class="numberBtn" id="fraction" value=".">.</button>
+                        <button class="operationButton" id="total" value="=">=</button>
                     </div>
                 </div>
             </div>
