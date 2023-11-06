@@ -12,12 +12,14 @@ let operationResult = document.querySelector('.operationResult');
 
 /* Declaring Global Variables */
 
-let operand1 = 0;
-let operand2 = 0;
+let operand1 = '';
+let operand2 = '';
 let operator = '';
 let inputChar='';
 let inputString='';
-let operators=['+','-','*','=','/','^']
+let operators=['+','-','*','=','/','^'];
+let digits= [0,1,2,3,4,5,6,7,8,9]
+
 
 
 
@@ -26,41 +28,61 @@ let operators=['+','-','*','=','/','^']
 
 function getInput(inputChar){
 
+    operationHistory.textContent ='';
+
     if(operators.some((opr)=>{
         return opr == inputChar
     })){
 
         if(operand2!=''){
 
-            calculate(operand1,operator,operand2);
+            calculate();
 
             if(inputChar == '='){
 
                 operator='';
-                operand1='';
+                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
             }
             else{
 
                 operator=inputChar;
+                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
             }
         }
         else{
 
-            operator=inputChar;
-        }
+            if(operand1 !=''){
+
+                if(inputChar == '='){
+
+                    operator='';
+                    operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+                }
+                else{
+                    operator=inputChar;
+                    operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+           
+                }
+
+            }
+            
+             }
     }
     else{
 
         if(operator!=''){
 
             operand2+=inputChar;
+            operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
         }
         else{
 
             operand1+=inputChar;
+            operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
 
         }
     }
+    
     
 
 }
@@ -100,57 +122,91 @@ function edit(editAction){
         operand1='';
         operand2='';
         operator='';
-        operationResult='';
-        operationHistory='';
-
+        operationResult.textContent='';
+        operationHistory.textContent='';
+        
     }
 
 }
 
-function calculate(operand1,operator,operand2){
+function calculate(){
 
     switch (operator){
-        case '+': operand1 = +operand1 + +operand2;
+        case '+': operand1 = (+operand1 + +operand2).toFixed(3);
             break;
-        case '-': operand1 = +operand1 - +operand2;
+        case '-': operand1 = (+operand1 - +operand2).toFixed(3);
             break;
-        case '^': operand1 = (+operand1)** +operand2;
+        case '^': operand1 = ((+operand1)** +operand2).toFixed(3);
+            break;
+        case '*': operand1 = ((+operand1)* +operand2).toFixed(3);
             break;
         case '/': if(+operand2 != 0){
-                        operand1 = +operand1 / +operand2;
+                        operand1 = (+operand1 / +operand2).toFixed(3);
                     }
                     else {
-                        operand1 = 'Division by 0 is impossible';
+                        operationHistory.textContent = 'Division by 0 is impossible';
                     }
             break;
         default : break;
     }
-
+    
     operator='';
     operand2='';
     operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+    
 }
 
 function initialize(){
 
     numberBtn.forEach((Btn)=>{
 
-        Btn.addEventListener('mousedown',()=>{})
+        Btn.addEventListener('mousedown',(e)=>{
+
+            inputChar= e.target.value;
+            getInput(inputChar);
+
+        })
 
     })
 
     operationBtn.forEach((Btn)=>{
 
-        Btn.addEventListener('mousedown',()=>{})
+        Btn.addEventListener('mousedown',(e)=>{
+            inputChar= e.target.value;
+            getInput(inputChar);
+        })
     })
     
     editBtn.forEach((Btn)=>{
 
-        Btn.addEventListener('mousedown',()=>{})
+        Btn.addEventListener('mousedown',(e)=>{
+            edit(e.target.value)
+        })
     })
 
     document.addEventListener('keydown',(e)=>{
 
+        if(digits.some((dig)=>{
+            return dig == e.key;
+        })) {
+
+            inputChar=e.key;
+            getInput(inputChar);
+            
+        }
+        else if(operators.some((opr)=>{
+            return opr == e.key;
+        })){
+            
+            inputChar= e.key
+            getInput(inputChar);
+        }
+        else if(e.key == 'Backspace'){
+            edit('delete');
+        }
+        else if(e.key == 'Enter'){
+            getInput('=');
+        }
         
     })
 

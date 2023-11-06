@@ -98,6 +98,8 @@ body{
     height: 7vw;
     border-bottom: 1px dashed rgb(223, 222, 222);
     border-collapse: collapse;
+    align-items: center;
+    font-size:larger;
 
 }
 
@@ -105,8 +107,10 @@ body{
 
     display: flex;
     justify-content: end;
+    align-items: center;
     height: 7vw;
     width: 26.4vw;
+    font-size: larger;
 
 }
 
