@@ -1,70 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./apps/frontend/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./apps/frontend/style.css" />
     <script src="./apps/frontend/script.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+        <!--Header-->
     <div class="header">
-        <h2 id="title">Web CalculLABOR</h2>
+      <h2 id="title">Web CalculLABOR</h2>
     </div>
+        <!-- Calculator Section -->
     <div class="content">
-        <div class="calculator">
-            <div class="display">
-                <div id="logo"></div>
-                <div id="displayContent">
-                    <div class="operationHistory"></div>
-                    <div class="operationResult"></div>
-                </div>
-            </div>
-            <div class="operationContent">
-                <div class="inputs">
-                    <div class="upperInputs">
-                        <div class="editInputs">
-                            <button class="editBtn" id="clear" value="clear"> Clear </button>
-                            <button class="editBtn" id="delete" value="delete"> Delete</button>
-                        </div>
-                        <div class="operationInputs2">
-                            <button class="operationButton" id="power" value="^">x^</button>
-                            <button class="operationButton" id="divison" value="/">/</button>
-                        </div>
-                    </div>
-                    <div class="middleInputs">
-                        <div class="numbersInputs">
-                            <div class="line1">
-                                <button class="numberBtn" id="n7" value="7">7</button>
-                                <button class="numberBtn" id="n8" value="8">8</button>
-                                <button class="numberBtn" id="n9" value="9">9</button>
-                            </div>
-                            <div class="line2">
-                                <button class="numberBtn" id="n4" value="4">4</button>
-                                <button class="numberBtn" id="n5" value="5">5</button>
-                                <button class="numberBtn" id="n6" value="6">6</button>
-                            </div>
-                            <div class="line3">
-                                <button class="numberBtn" id="n1" value="1">1</button>
-                                <button class="numberBtn" id="n2" value="2">2</button>
-                                <button class="numberBtn" id="n3" value="3">3</button>
-                            </div>
-                        </div>
-                        <div class="operationsInputs">
-                            <button class="operationButton" id="addition" value="+">+</button>
-                            <button class="operationButton" id="substraction" value="-">-</button>
-                            <button class="operationButton" id="multiplication" value="*">*</button>
-                        </div>
-                    </div>
-                    <div class="bottomInputs">
-                        <button class="numberBtn" id="n0" value="0">0</button>
-                        <button class="numberBtn" id="fraction" value=".">.</button>
-                        <button class="operationButton" id="total" value="=">=</button>
-                    </div>
-                </div>
-            </div>
+      <div class="calculator">
+            <!-- Display Section -->
+        <div class="display">
+          <div id="logo"></div>
+          <div id="displayContent">
+            <div class="operationHistory"></div>
+            <div class="operationResult"></div>
+          </div>
         </div>
+            <!-- Controls & Buttons Section -->
+        <div class="operationContent">
+          <div class="inputs">
+                
+            <div class="upperInputs">
+                <!-- Edit Controls -->
+              <div class="editInputs">
+                <button class="editBtn" id="clear" value="clear">Clear</button>
+                <button class="editBtn" id="delete" value="delete">
+                  Delete
+                </button>
+              </div>
+                <!-- Operation Controls -->
+              <div class="operationInputs2">
+                <button class="operationButton" id="power" value="^">x^</button>
+                <button class="operationButton" id="divison" value="/">
+                  /
+                </button>
+              </div>
+            </div>
+            <div class="middleInputs">
+                <!-- Numbers Controls -->
+              <div class="numbersInputs">
+                <div class="line1">
+                  <button class="numberBtn" id="n7" value="7">7</button>
+                  <button class="numberBtn" id="n8" value="8">8</button>
+                  <button class="numberBtn" id="n9" value="9">9</button>
+                </div>
+                <div class="line2">
+                  <button class="numberBtn" id="n4" value="4">4</button>
+                  <button class="numberBtn" id="n5" value="5">5</button>
+                  <button class="numberBtn" id="n6" value="6">6</button>
+                </div>
+                <div class="line3">
+                  <button class="numberBtn" id="n1" value="1">1</button>
+                  <button class="numberBtn" id="n2" value="2">2</button>
+                  <button class="numberBtn" id="n3" value="3">3</button>
+                </div>
+              </div>
+                <!-- Operations Controls -->
+              <div class="operationsInputs">
+                <button class="operationButton" id="addition" value="+">
+                  +
+                </button>
+                <button class="operationButton" id="substraction" value="-">
+                  -
+                </button>
+                <button class="operationButton" id="multiplication" value="*">
+                  *
+                </button>
+              </div>
+            </div>
+                <!-- Zero, Dot , Equality Controls -->
+            <div class="bottomInputs">
+              <button class="numberBtn" id="n0" value="0">0</button>
+              <button class="numberBtn" id="fraction" value=".">.</button>
+              <button class="operationButton" id="total" value="=">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer"><p>CopyRight @ Ilyas </p></div>
-</body>
+        <!-- Footer -->
+    <div class="footer"><p>CopyRight @ Ilyas</p></div>
+  </body>
 </html>

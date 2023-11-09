@@ -1,8 +1,8 @@
 /* Declaring Inputs */
 
 const editBtn = document.querySelectorAll('.editBtn');
-const operationBtn= document.querySelectorAll('.operationButton');
-const numberBtn= document.querySelectorAll('.numberBtn')
+const operationBtn = document.querySelectorAll('.operationButton');
+const numberBtn = document.querySelectorAll('.numberBtn')
 
 
 /* Declaring Outputs */
@@ -15,10 +15,10 @@ let operationResult = document.querySelector('.operationResult');
 let operand1 = '';
 let operand2 = '';
 let operator = '';
-let inputChar='';
-let inputString='';
-let operators=['+','-','*','=','/','^'];
-let digits= [0,1,2,3,4,5,6,7,8,9]
+let inputChar = '';
+let inputString = '';
+let operators = ['+', '-', '*', '=', '/', '^'];
+let digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 
@@ -26,190 +26,190 @@ let digits= [0,1,2,3,4,5,6,7,8,9]
 /* Functions */
 
 
-function getInput(inputChar){
+function getInput(inputChar) {
 
-    operationHistory.textContent ='';
+    operationHistory.textContent = '';
 
-    if(operators.some((opr)=>{
+    if (operators.some((opr) => {
         return opr == inputChar
-    })){
+    })) {
 
-        if(operand2!=''){
+        if (operand2 != '') {
 
             calculate();
 
-            if(inputChar == '='){
+            if (inputChar == '=') {
 
-                operator='';
-                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+                operator = '';
+                operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
             }
-            else{
+            else {
 
-                operator=inputChar;
-                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+                operator = inputChar;
+                operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
             }
         }
-        else{
+        else {
 
-            if(operand1 !=''){
+            if (operand1 != '') {
 
-                if(inputChar == '='){
+                if (inputChar == '=') {
 
-                    operator='';
-                    operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+                    operator = '';
+                    operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
                 }
-                else{
-                    operator=inputChar;
-                    operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
-           
+                else {
+                    operator = inputChar;
+                    operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
+
                 }
 
             }
-            
-             }
-    }
-    else{
-
-        if(operator!=''){
-
-            operand2+=inputChar;
-            operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
-        }
-        else{
-
-            operand1+=inputChar;
-            operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
 
         }
     }
-    
-    
+    else {
+
+        if (operator != '') {
+
+            operand2 += inputChar;
+            operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
+        }
+        else {
+
+            operand1 += inputChar;
+            operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
+
+        }
+    }
+
+
 
 }
 
-function edit(editAction){
+function edit(editAction) {
 
-    if(editAction == 'delete'){
+    if (editAction == 'delete') {
 
-        if(operator != ''){
+        if (operator != '') {
 
-            if(operand2!=''){
+            if (operand2 != '') {
 
                 operand2 = operand2.split('');
                 operand2.pop();
                 operand2 = operand2.join('');
-                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+                operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
 
             }
-            else{
+            else {
 
-                operator='';
-                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+                operator = '';
+                operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
 
             }
         }
-        else{
+        else {
 
-                operand1 = operand1.split('');
-                operand1.pop();
-                operand1 = operand1.join('');
-                operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
+            operand1 = operand1.split('');
+            operand1.pop();
+            operand1 = operand1.join('');
+            operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
 
         }
     }
-    else{
+    else {
 
-        operand1='';
-        operand2='';
-        operator='';
-        operationResult.textContent='';
-        operationHistory.textContent='';
-        
+        operand1 = '';
+        operand2 = '';
+        operator = '';
+        operationResult.textContent = '';
+        operationHistory.textContent = '';
+
     }
 
 }
 
-function calculate(){
+function calculate() {
 
-    switch (operator){
+    switch (operator) {
         case '+': operand1 = (+operand1 + +operand2).toFixed(3);
             break;
         case '-': operand1 = (+operand1 - +operand2).toFixed(3);
             break;
-        case '^': operand1 = ((+operand1)** +operand2).toFixed(3);
+        case '^': operand1 = ((+operand1) ** +operand2).toFixed(3);
             break;
-        case '*': operand1 = ((+operand1)* +operand2).toFixed(3);
+        case '*': operand1 = ((+operand1) * +operand2).toFixed(3);
             break;
-        case '/': if(+operand2 != 0){
-                        operand1 = (+operand1 / +operand2).toFixed(3);
-                    }
-                    else {
-                        operationHistory.textContent = 'Division by 0 is impossible';
-                    }
+        case '/': if (+operand2 != 0) {
+            operand1 = (+operand1 / +operand2).toFixed(3);
+        }
+        else {
+            operationHistory.textContent = 'Division by 0 is impossible';
+        }
             break;
-        default : break;
+        default: break;
     }
-    
-    operator='';
-    operand2='';
-    operationResult.textContent= operand1 + ' ' + operator + ' ' + operand2;
-    
+
+    operator = '';
+    operand2 = '';
+    operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
+
 }
 
-function initialize(){
+function initialize() {
 
-    numberBtn.forEach((Btn)=>{
+    numberBtn.forEach((Btn) => {
 
-        Btn.addEventListener('mousedown',(e)=>{
+        Btn.addEventListener('mousedown', (e) => {
 
-            inputChar= e.target.value;
+            inputChar = e.target.value;
             getInput(inputChar);
 
         })
 
     })
 
-    operationBtn.forEach((Btn)=>{
+    operationBtn.forEach((Btn) => {
 
-        Btn.addEventListener('mousedown',(e)=>{
-            inputChar= e.target.value;
+        Btn.addEventListener('mousedown', (e) => {
+            inputChar = e.target.value;
             getInput(inputChar);
         })
     })
-    
-    editBtn.forEach((Btn)=>{
 
-        Btn.addEventListener('mousedown',(e)=>{
+    editBtn.forEach((Btn) => {
+
+        Btn.addEventListener('mousedown', (e) => {
             edit(e.target.value)
         })
     })
 
-    document.addEventListener('keydown',(e)=>{
+    document.addEventListener('keydown', (e) => {
 
-        if(digits.some((dig)=>{
+        if (digits.some((dig) => {
             return dig == e.key;
         })) {
 
-            inputChar=e.key;
+            inputChar = e.key;
             getInput(inputChar);
-            
+
         }
-        else if(operators.some((opr)=>{
+        else if (operators.some((opr) => {
             return opr == e.key;
-        })){
-            
-            inputChar= e.key
+        })) {
+
+            inputChar = e.key
             getInput(inputChar);
         }
-        else if(e.key == 'Backspace'){
+        else if (e.key == 'Backspace') {
             edit('delete');
         }
-        else if(e.key == 'Enter'){
+        else if (e.key == 'Enter') {
             getInput('=');
         }
-        
+
     })
 
-};
+}
 
 initialize();

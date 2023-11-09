@@ -1,3 +1,17 @@
+/* 
+    Index:
+        /* General Styling*/
+        /*<!--- Headers Styling--->*/
+        /* <!--- Calculator Section Styling--->*/
+            /*<!!---Calculator's Styling*/
+                /*<!!!--- Display's Section Styling --->*/
+                /*<!!!--- Controls/Inputs Styling--->*/
+        /*<!--- Footers Styling --->*/
+
+
+
+        
+/* General Styling*/
 *{
     border: 0;
     margin: 0;
@@ -20,6 +34,7 @@ body{
 
 }
 
+/*<!--- Headers Styling--->*/
 .header{
 
     width: 100vw;
@@ -31,6 +46,7 @@ body{
     background-color: #CCC8AA;
 }
 
+/* <!--- Calculator Section Styling--->*/
 .content{
 
     width: 100vw;
@@ -41,7 +57,7 @@ body{
 
 }
 
-
+    /*<!!---Calculator's Styling*/
 .calculator{
 
     width: 30vw;
@@ -58,7 +74,7 @@ body{
 
 
 
-
+        /*<!!!--- Display's Section Styling --->*/
 .display{
 
     display: flex;
@@ -116,9 +132,7 @@ body{
 
 
 
-
-
-
+        /*<!!!--- Controls/Inputs Styling--->*/
 .operationContent{
 
     width: 26.4vw;
@@ -287,6 +301,11 @@ button:active{
 
 }
 
+
+
+
+
+/*<!--- Footers Styling --->*/
 .footer{
 
     position: fixed;
