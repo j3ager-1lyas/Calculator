@@ -82,9 +82,6 @@ function getInput(inputChar) {
 
         }
     }
-
-
-
 }
 
 function edit(editAction) {
@@ -132,16 +129,16 @@ function edit(editAction) {
 function calculate() {
 
     switch (operator) {
-        case '+': operand1 = (+operand1 + +operand2).toFixed(3);
+        case '+': operand1 = +operand1 + +operand2;
             break;
-        case '-': operand1 = (+operand1 - +operand2).toFixed(3);
+        case '-': operand1 = +operand1 - +operand2;
             break;
-        case '^': operand1 = ((+operand1) ** +operand2).toFixed(3);
+        case '^': operand1 = (+operand1) ** +operand2;
             break;
-        case '*': operand1 = ((+operand1) * +operand2).toFixed(3);
+        case '*': operand1 = (+operand1) * +operand2;
             break;
         case '/': if (+operand2 != 0) {
-            operand1 = (+operand1 / +operand2).toFixed(3);
+            operand1 = +operand1 / +operand2;
         }
         else {
             operationHistory.textContent = 'Division by 0 is impossible';
@@ -149,7 +146,9 @@ function calculate() {
             break;
         default: break;
     }
-
+    if(!(Number.isInteger(operand1))){
+        operand1=operand1.toFixed(3);
+    }
     operator = '';
     operand2 = '';
     operationResult.textContent = operand1 + ' ' + operator + ' ' + operand2;
